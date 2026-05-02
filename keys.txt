@@ -1,3 +1,0 @@
-FRED: a6a92dedf68afca7b221af1cbfca6e4d
-
-AlphaVantage: C10FOGF5DVI8EPIW
