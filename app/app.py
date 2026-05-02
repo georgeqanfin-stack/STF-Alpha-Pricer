@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title='STF-Alpha-Pricer', page_icon='📊', layout='wide')
 
 def load_all():
-    df = pd.read_csv('../data/fred_master.csv', parse_dates=['date'], index_col='date')
-    fx = pd.read_csv('../data/fx_oracle_clean.csv', parse_dates=['observation_date'], index_col='observation_date')
-    comm = pd.read_csv('../data/commodity_adj.csv', index_col='commodity')
-    corr = pd.read_csv('../data/corridor_map.csv', index_col='corridor')
+    df = pd.read_csv('data/fred_master.csv', parse_dates=['date'], index_col='date')
+    fx = pd.read_csv('data/fx_oracle_clean.csv', parse_dates=['observation_date'], index_col='observation_date')
+    comm = pd.read_csv('data/commodity_adj.csv', index_col='commodity')
+    corr = pd.read_csv('data/corridor_map.csv', index_col='corridor')
     return df, fx, comm, corr
 
 def load_model():
-    with open('../data/xgboost_model.pkl', 'rb') as f:
+    with open('data/xgboost_model.pkl', 'rb') as f:
         return pickle.load(f)
 
 df, fx, comm, corr = load_all()
